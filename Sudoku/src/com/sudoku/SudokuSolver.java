@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Sudoku {
+public class SudokuSolver {
 
 	public static boolean solveForSolution(int i, int j, int[][] cells) {
 			if (i == 9) {
@@ -49,16 +49,16 @@ public class Sudoku {
 			return true; // if no violations then return true.
 		    }
 
-		public static int[][] initMatrix(String[] inputArray) throws Exception { 
-			int[][] problem = new int[9][9]; // default value is zero.
-			for (int n = 0; n < inputArray.length; ++n) {
-			    int i = Integer.parseInt(inputArray[n].substring(0,1));   
-			    int j = Integer.parseInt(inputArray[n].substring(1,2));   
-			    int val = Integer.parseInt(inputArray[n].substring(2,3)); 
-			    problem[i][j] = val;
-			}
-			return problem;
-		    }
+		//public static int[][] initMatrix(String[] inputArray) throws Exception { 
+			//int[][] problem = new int[9][9]; // default value is zero.
+			//for (int n = 0; n < inputArray.length; ++n) {
+			  //  int i = Integer.parseInt(inputArray[n].substring(0,1));   
+			   // int j = Integer.parseInt(inputArray[n].substring(1,2));   
+			   // int val = Integer.parseInt(inputArray[n].substring(2,3)); 
+			   // problem[i][j] = val;
+		//	}
+			//return problem;
+		  //  }
 
 		public static void displayMatrix(int[][] solution) {
 			for (int i = 0; i < 9; ++i) {

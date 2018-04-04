@@ -8,8 +8,10 @@ public class App {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		Sudoku s = new Sudoku();
-		int[][] matrix = s.initMatrix(args);
+		SudokuSolver s = new SudokuSolver();
+		SudokuGenerator sg = new SudokuGenerator();
+		int numOfHoles = 65; // Higher the number of holes harder the difficulty max number = 70;
+		int[][] matrix =sg.nextBoard(numOfHoles);
 		s.displayMatrix(matrix);
 		if (s.solveForSolution(0,0,matrix))    // solves for a solution using backtracking.
 		   s.displayMatrix(matrix);
